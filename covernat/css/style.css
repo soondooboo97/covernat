@@ -1,0 +1,675 @@
+/*노멀라이징*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/*라이브러리*/
+
+:root {
+    --site-width: 1280px;
+}
+
+.row:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+.cell {
+    float: left;
+}
+
+.con {
+    /*   max-width: var(--site-width); */
+    margin: 0 auto;
+    width: 100%;
+    background: none;
+    height: 100%;
+    z-index: 200;
+    min-height: calc(100% - 357px);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.wrap {
+    max-width: 100%;
+}
+
+
+
+
+/*---------------------header---------------------*/
+
+.top {
+    width: 100%;
+    height: 38px;
+    background-color: #000;
+    text-align: center;
+}
+
+.top > span {
+    color: #fff;
+    font-weight: lighter;
+    font-size: 14px;
+    line-height: 38px;
+}
+
+.header-wrap .top-bar {
+    padding: 0 25px;
+    height: 60px;
+    /*   border:1px solid #ddd;*/
+    display: flex;
+    position: relative;
+}
+
+.header-wrap .logo-wrap {
+
+    width: 149px;
+    height: 40px;
+    margin-top: 10px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.header-wrap .logo-wrap .logo {
+    background-image: url(../img/new_logo04.png);
+    width: 100%;
+    height: 100%;
+}
+
+.fulldown-menu {
+    width: 1000px;
+
+}
+
+.fulldown-menu > ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    line-height: 40px;
+    margin-left: 30px;
+}
+
+.fulldown-menu > ul > li {
+    width: 18%;
+}
+
+.fulldown-menu ul > li > a {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+.fulldown-menu > ul > li > div {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    height: 330px;
+    background-color: #fff;
+}
+
+.fulldown-menu > ul > li > div ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+}
+
+.fulldown-menu > ul > li > div ul > li {
+    line-height: 10px;
+
+
+}
+
+.fulldown-menu > ul > li > div ul > li > a {
+    width: 100%;
+    display: block;
+    font-size: 13px;
+}
+
+/* 2차 메뉴 위치 */
+.fulldown-menu > ul > li:nth-of-type(1) > div ul {
+    left: 16%;
+}
+
+.fulldown-menu > ul > li:nth-of-type(2) > div ul {
+    left: 25%;
+}
+
+.fulldown-menu > ul > li:nth-of-type(3) > div ul {
+    left: 34%;
+}
+
+.fulldown-menu > ul > li:nth-of-type(4) > div ul {
+    left: 43%;
+}
+
+
+/* 후버시 작동 기능 */
+.fulldown-menu ul > li > a:hover,
+.fulldown-menu ul > li > a:active,
+.fulldown-menu ul > li > a:focus {
+    color: #888;
+    transition: all 0.2s;
+}
+
+.fulldown-menu > ul > li > div {
+    opacity: 0;
+    visibility: hidden;
+    /*  transition: visibility 0s, opacity 0.5s linear;*/
+}
+
+
+.fulldown-menu > ul > li:hover div {
+    opacity: 1;
+    visibility: visible;
+    border-top: 1px solid #ddd;
+}
+
+
+.header-wrap .login {
+
+    width: 350px;
+    margin-left: auto;
+
+}
+
+.header-wrap .login .login1:hover {
+    color: #bebcbc;
+    transition: 0.3s;
+}
+
+.header-wrap .login .login2:hover {
+    color: #bebcbc;
+    transition: 0.3s;
+}
+
+.header-wrap .login ul {
+    display: flex;
+    width: 340px;
+    line-height: 60px;
+}
+
+.header-wrap .login ul li {
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 15px;
+    vertical-align: middle;
+}
+
+.header-wrap .login ul .bag {
+    margin-top: 12px;
+}
+
+.header-wrap .login ul .search {
+    margin-top: 12px;
+}
+
+
+
+
+
+/*---------------------section1---------------------*/
+
+.section {
+    padding: 0 25px;
+}
+
+.section .main-img {
+    background-image: url(../img/main_visual01_210614.jpeg);
+    background-position: center;
+    background-size: cover;
+    max-width: 1742px;
+    /*    height: 557.44px;*/
+    padding-bottom: 32%;
+    cursor: pointer;
+}
+
+/*---------------------section2---------------------*/
+
+
+.section .title {
+
+    text-align: center;
+    color: #2c2b2b;
+    margin-top: 50px;
+
+}
+
+.section .title .big {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.section .title .small {
+    font-size: 15px;
+    margin: 5px 0 25px 0;
+}
+
+
+.section h2 {
+    font-weight: 400;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 780px;
+    margin-top: 100px;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 600px;
+    text-align: left;
+    font-size: 18px;
+    /*        border:1px solid red;*/
+}
+
+.swiper-slide .name {
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.swiper-slide .name span {
+    font-size: 17px;
+}
+
+.swiper-slide .price {
+    margin-top: 20px;
+    font-size: 17px;
+    margin-left: 20px;
+}
+
+.swiper-slide .price li:nth-child(1) {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.swiper-slide .price li:nth-child(2) {
+    color: red;
+}
+
+.swiper-slide img {
+
+    width: 414px;
+    height: 450px;
+    object-fit: cover;
+}
+
+
+
+
+/*---------------------section3---------------------*/
+
+.section3 .main-img {
+    background-image: url(../img/main_ban02.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 32%;
+    max-width: 1742px;
+    cursor: pointer;
+    margin-top: 130px;
+}
+
+.section .link-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.section .link {
+    font-size: 16px;
+    color: #fff;
+    background: #000;
+    padding: 10px 50px;
+    display: inline-block;
+    border-radius: 50px;
+    margin-right: 8px;
+}
+
+.section .link:last-child {
+    margin-right: 0;
+}
+
+/*---------------------section4---------------------*/
+
+
+.section4 .main-img {
+    margin-top: 130px;
+    background-image: url(../img/main_ban03.jpeg);
+    max-width: 1742px;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 32%;
+    cursor: pointer;
+    margin-top: 100px;
+}
+
+/*---------------------section5---------------------*/
+
+
+.section5 .main-img {
+    margin-top: 130px;
+    background-image: url(../img/main_ban04.jpeg);
+    max-width: 1742px;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 32%;
+    cursor: pointer;
+    margin-top: 100px;
+}
+
+/*---------------------section6---------------------*/
+
+.section6 .swiper-slide .price li:nth-child(1) {
+    color: #999;
+    text-decoration: none;
+}
+
+
+/*---------------------section7---------------------*/
+
+
+.ddd {
+    width: 100%;
+    overflow: hidden;
+}
+
+.section7 {
+    margin-top: 100px;
+    width: 100%;
+    height: 785px;
+    position: relative;
+    overflow: hidden;
+}
+
+.RollDiv {
+    margin-bottom: 100px;
+    margin-top: 100px;
+    position: absolute;
+    overflow: hidden;
+    height: 500px;
+    width: 100%;
+}
+
+.RollDiv img {
+    height: 500px;
+    position: absolute;
+}
+
+.section7 .title {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+}
+
+/*---------------------footer---------------------*/
+
+.footer-wrap {
+    border-top: 1px solid #e3e3e3;
+    margin-top: 150px;
+}
+
+.footer-wrap .in {
+    padding: 65px 0;
+    width: calc(100% - 90px);
+    margin: auto;
+}
+
+.footer-wrap .in .left {
+    display: flex;
+    justify-content: space-between;
+    float: left;
+    width: 50%;
+    margin-bottom: 100px;
+}
+
+.footer-wrap .in .left > ul {
+    color: #333;
+}
+
+.footer-wrap .in .left > ul ul {
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin-top: 20px;
+    color: #838383;
+}
+
+.footer-wrap .in .right {
+    float: right;
+    width: 43%;
+    font-size: 13px;
+    color: #838383;
+    letter-spacing: 1px;
+    line-height: 20px;
+    margin-bottom: 100px;
+}
+
+
+/*---------------------quick---------------------*/
+
+
+.quick {
+    position: fixed;
+    right: 20px;
+    width: 37px;
+    bottom: 20px;
+    z-index: 99;
+}
+
+
+
+/*---------------------반응형---------------------*/
+
+
+
+
+
+
+
+@media screen and (max-width: 1774px) {
+    .swiper-container .swiper-slide img{
+        width: 314px;
+        height: 354px;
+    }
+
+    .swiper-container-horizontal>.swiper-scrollbar {
+        
+        bottom:110px;
+    }
+    
+    .section3 .main-img{
+        margin-top: 20px;
+    }
+}
+
+
+@media screen and (max-width: 1535px) {
+
+    .header-wrap .login ul li:nth-child(1) {
+        display: none;
+    }
+
+    .header-wrap .login ul li:nth-child(2) {
+        display: none;
+    }
+
+    .header-wrap .login ul li:nth-child(3) {
+        display: none;
+    }
+
+    .header-wrap .login ul li:nth-child(4) {
+        margin-left: auto;
+    }
+
+    .fulldown-menu {
+        width: 850px;
+    }
+
+    .fulldown-menu ul {
+        justify-content: flex-end;
+    }
+    
+    .swiper-container .swiper-slide img{
+        width: 312px;
+        height: 320px;
+    }
+     .section3 .main-img{
+        margin-top: 10px;
+    }
+    
+    .RollDiv img {
+        
+        height: 450px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 1369px) {
+    .fulldown-menu {
+        width: 650px;
+    }
+
+}
+
+@media screen and (max-width: 1284px) {
+    .swiper-container .swiper-slide img{
+        width: 250px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 1182px) {
+    .fulldown-menu {
+        width: 550px;
+    }
+
+}
+
+
+@media screen and (max-width: 1090px) {
+
+    .header-wrap .fulldown-menu {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 850px) {
+
+    .header-wrap .logo-wrap {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+       
+    }
+    
+    .section .title .big{
+        font-size:25px;
+        
+    }
+
+
+}
+
+@media screen and (max-width: 741px) {
+
+    
+    .section .title .big{
+        font-size:23px;
+        
+    }
+    .section .title .small{
+        font-size:12px;
+    }
+
+}
+
+
+@media screen and (max-width: 640px) {
+
+    
+     .swiper-container .swiper-slide img{
+        width: 480px;
+        height: 500px;
+    }
+    
+    .swiper-container-horizontal>.swiper-scrollbar {
+        
+        bottom:10px;
+    }
+    
+    .section3 .main-img{
+        margin-top: 80px;
+    }
+    
+    .section7 .title{
+        bottom :60px;
+    }
+}
+
+@media screen and (max-width: 501px) {
+
+    
+     .swiper-container .swiper-slide img{
+        width: 450px;
+        height: 470px;
+    }
+    
+       .section .title .big{
+        font-size:18px;
+        
+    }
+    .section .title .small{
+        font-size:10px;
+    }
+    
+    .title {
+        margin-top : 10px;
+    }
+
+ 
+}
+
+@media screen and (max-width: 461px) {
+
+    
+     .swiper-container .swiper-slide img{
+        width: 400px;
+        height: 440px;
+    }
+    
+ 
+}
+
+
+
+
