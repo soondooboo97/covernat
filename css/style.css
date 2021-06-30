@@ -148,19 +148,19 @@ a {
 
 /* 2차 메뉴 위치 */
 .fulldown-menu > ul > li:nth-of-type(1) > div ul {
-    left: 16%;
+    left: 113px;
 }
 
 .fulldown-menu > ul > li:nth-of-type(2) > div ul {
-    left: 25%;
+    left: 290px;
 }
 
 .fulldown-menu > ul > li:nth-of-type(3) > div ul {
-    left: 34%;
+    left: 480px;
 }
 
 .fulldown-menu > ul > li:nth-of-type(4) > div ul {
-    left: 43%;
+    left: 650px;
 }
 
 
@@ -185,6 +185,168 @@ a {
     border-top: 1px solid #ddd;
 }
 
+
+
+.menuIconBox {
+    /* 햄버거 박스랑 작대기 */
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.menuIconBox > div {
+    /* 햄버거 */
+    width: 50px;
+    height: 7px;
+    background-color: #84aa41;
+    margin-bottom: 10px;
+}
+
+/* 숨겨진 메뉴박스 */
+.hide-menuBpx {
+    width: 400px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -800px;
+    background-color: #e5edd9;
+    transition: all 0.4s;
+    /*   border-right: 1px solid red; */
+    z-index: 99;
+}
+
+.hide-menuBpx.active {
+    right: 0;
+}
+
+
+.hide-menuBpx > .search {
+    width: 100%;
+    height: 80px;
+    background-color: #84aa41;
+    border-left: 1px solid #e5edd9;
+
+}
+
+.hide-menuBpx > .search > input {
+    width: 200px;
+    height: 40px;
+    position: relative;
+    left: 50px;
+    bottom: -17px;
+}
+
+.hide-menuBpx > .search > button {
+    width: 100px;
+    height: 40px;
+    font-size: 17px;
+    /*   border:solid 0px; */
+    position: relative;
+    left: 50px;
+    bottom: -17px;
+    cursor: pointer;
+}
+
+
+.hide-menuBpx > ul {
+    height: 50px;
+    cursor: pointer;
+
+}
+
+.hide-menuBpx > ul ul {
+    background-color: #e5edd9;
+}
+
+.hide-menuBpx > ul > li:hover {
+    background-color: #84aa41;
+    transition: 0.3s;
+    color: #fff;
+    border-top: solid 0.5px #e5edd9;
+}
+
+.hide-menuBpx > ul ul > li {
+    color: #84aa41;
+}
+
+.hide-menuBpx > ul > li {
+    font-size: 20px;
+    line-height: 50px;
+    border-top: solid 0.5px #84aa41;
+    font-size: 15px;
+    color: #84aa41;
+}
+
+
+.hide-menuBpx > ul > li:last-child {
+    border-bottom: solid 0.5px #84aa41;
+}
+
+.hide-menuBpx > ul > li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: 20px;
+}
+
+.hide-menuBpx > ul ul > li > a:hover {
+    border-bottom: 1px solid #000;
+
+}
+
+.hide-menuBpx > ul ul > li > a {
+    margin-left: 20px;
+}
+
+.hide-menuBpx.active {
+    right: 0;
+}
+
+.hide-menuBpx > .close-btn {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 90px;
+    left: -40px;
+    cursor: pointer;
+}
+
+
+
+.hide-menuBpx > .close-btn::before,
+.hide-menuBpx > .close-btn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #84aa41;
+    top: 50%;
+    transform: translatey(-50%) rotate(45deg);
+}
+
+.hide-menuBpx > .close-btn::after {
+    transform: translatey(-50%) rotate(-45deg);
+}
+
+.close-btn:hover {
+    transform: rotate(180deg);
+    transition: all 1s;
+}
+
+
+
+
+/*----*/
 
 .header-wrap .login {
 
@@ -242,6 +404,7 @@ a {
     /*    height: 557.44px;*/
     padding-bottom: 32%;
     cursor: pointer;
+    margin: 0 auto;
 }
 
 /*---------------------section2---------------------*/
@@ -313,7 +476,7 @@ a {
 .swiper-slide img {
 
     width: 414px;
-    height: 450px;
+    height: 500px;
     object-fit: cover;
 }
 
@@ -579,7 +742,15 @@ a {
     .header-wrap .fulldown-menu {
         display: none;
     }
-
+    .footer-wrap .in .left > ul ul {
+    letter-spacing: 0px;
+    font-size: 11px;
+    }
+    .footer-wrap .in .right{
+        letter-spacing: 0;
+        font-size: 12px;
+    }
+  
 
 }
 
@@ -590,6 +761,10 @@ a {
         left: 50%;
         transform: translateX(-50%);
 
+    }
+      .footer-wrap .in .left {
+        display: flex;
+        flex-direction: column;
     }
 
     .section .title .big {
@@ -603,8 +778,29 @@ a {
           margin-top: 10px;
     }
 
+    .footer-wrap .in .left > ul {
+        margin-top:20px;
+    }
+    
 
+    .section .link {
+        font-size: 10px;
+        padding: 9px 30px;
+    }
+    
 }
+
+@media screen and (max-width: 768px) {
+
+ .swiper-container .swiper-slide img {
+        width: 310px;
+        height: 320px;
+    
+    }
+  
+    
+}
+
 
 @media screen and (max-width: 741px) {
 
@@ -618,6 +814,10 @@ a {
         font-size: 12px;
     }
 
+    .swiper-scrollbar-drag {
+        width: 80px;
+    }
+    
 }
 
 
